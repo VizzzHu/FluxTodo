@@ -29,7 +29,7 @@ var todoApp = React.createClass({
   render() {
     return (
       <div>
-        <TodoInput />
+        <TodoInput/>
         <TodoList data={this.state.todoList}/>
       </div>
     );

@@ -8,6 +8,20 @@ var TodoActions = {
       data: data,
     });
   },
+
+  deleteItem: function(data) {
+    AppDispatcher.dispatch({
+      actionType: TodoConstants.DELETE_ITEM,
+      data: data,
+    });
+  },
+
+  completeItem: function(data) {
+    AppDispatcher.dispatch({
+      actionType: TodoConstants.COMPLETE_ITEM,
+      data: data,
+    });
+  },
 };
 
 module.exports = TodoActions;

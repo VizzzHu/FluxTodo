@@ -2,6 +2,7 @@ var AppDispatcher = require('../dispatcher/AppDispatcher');
 var EventEmitter = require('events').EventEmitter;
 var TodoConstants = require('../constants/TodoConstants');
 var assign = require('object-assign');
+var _ = require('../lib/lodash.js');
 
 var CHANGE_EVENT = 'change';
 var _todos = [];
@@ -32,7 +33,20 @@ AppDispatcher.register(function(action) {
         complete: false,
       };
       _todos.push(newTodoItem);
-    break;
+      break;
+
+    case TodoConstants.DELETE_ITEM:
+      _todos = _.reject(_todos, (todo) => todo === action.data);
+      break;
+
+    case TodoConstants.COMPLETE_ITEM:
+      _todos = _.map(_todos, (todo) => {
+        if (todo === action.data) {
+          todo.complete = !todo.complete;
+        }
+        return todo;
+      });
+      break;
 
     default:
   }

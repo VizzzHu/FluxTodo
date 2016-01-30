@@ -10,7 +10,7 @@ var TodoList = React.createClass({
   	});
 
     return (
-      <div>
+      <div className='todoList'>
         {list}
 	  </div>
 	);

@@ -1,4 +1,80 @@
+#todoapp {
+  width: 500px;
+  height: 100%;
+  padding: 20px;
+  background-color: #FFF1C2;
+}
+
+.todoTitle {
+  text-align: left;
+  padding: 5px;
+  font-size: 25px;
+  color: gray;
+}
+
+.todoInput {
+  text-align: left;
+  height: 50px;
+  width: 500px;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.todoList {
+  text-align: left;
+}
+
+.todoItem {
+  border: 1px solid #f0f0f0;
+  background-color: white;
+  width: 505px;
+  height: 25px;
+  font-size: 20px;
+  color: gray;
+}
+
+.todoItemRadio {
+  margin-right: 10px;
+}
+
 .completedItem {
   text-decoration: line-through;
+  text-align: left;
+  margin-top: 6px;
 }
+
+.notCompletedItem {
+  text-align: left;
+  margin-top: 6px;
+}
+
+.deleteItem {
+  position: absolute;
+  left: 505px;
+  border: none;
+  font-size: 10px;
+  margin-top: 6px;
+  background-color: white;
+}
+
+.todoStatus {
+  display: block;
+  background-color: white;
+  width: 505px;
+  height: 20px;
+  color: #feb24c;
+}
+
+.todoStatusHidden {
+  display: none;
+}
+
+.todoStatusLeft {
+  margin-right: 200px;
+}
+
+.todoStatusLink {
+  padding: 3px 0px 0px 10px;
+}
+
 

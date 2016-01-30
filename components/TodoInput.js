@@ -11,7 +11,7 @@ var TodoInput = React.createClass({
 
   render: function() {
     return (
-      <div>
+      <div className='todoInput'>
         <input
           value = {this.state.value}
           type='text'
@@ -31,7 +31,8 @@ var TodoInput = React.createClass({
 
   _save(e) {
     // for mouse enter
-    if (e.keyCode === 13) {
+    if (e.keyCode === 13 && e.target.value) {
+      debugger;
       TodoActions.create(e.target.value);
       this.setState({
         value: '',

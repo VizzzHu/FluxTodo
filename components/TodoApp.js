@@ -2,6 +2,7 @@ var React = require('react');
 var TodoInput = require('./TodoInput');
 var TodoList = require('./TodoList');
 var TodoStore = require('../stores/TodoStore');
+var TodoStatus = require('./TodoStatus');
 
 function getTodoState() {
   return {
@@ -29,8 +30,10 @@ var todoApp = React.createClass({
   render() {
     return (
       <div>
+        <div className='todoTitle'>TODOS</div>
         <TodoInput/>
         <TodoList data={this.state.todoList}/>
+        <TodoStatus data={this.state.todoList}/>
       </div>
     );
   }
